@@ -4,7 +4,7 @@ const Header =()=> {
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-            <h1>Coronavirus Counter</h1>
+            <h1>COVID-19 Counter</h1>
         </header>
     )
 }
