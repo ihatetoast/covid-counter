@@ -5,3 +5,8 @@ This is a basic React clicker app I created as an excuse to practice styling wit
 Click on the Good Things to lower the Coronavirus load. Click on the Bad Things to send us all to the hospital.
 
 
+~~~
+notes: 
+* create 3-5 good and bad habits that vary in value. 
+* svg of coronavirus 
+* maybe do these: graph, viral count (state) leads to mini coronas loaded in bg. (recharts?)
