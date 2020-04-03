@@ -2,46 +2,59 @@ import React, { Component } from 'react'
 import Button from './Button'
 import Score from './Score'
 import LineChartComp from './LineChart'
-
+//cootie count never below 1 because there's never a time when there are no cooties.
  class Game extends Component {
      state={
-         cooties: 0
+         cooties: 1,
+         cootieData:[
+            {
+                name: 'Week 1',  cases: 2400, 
+              },
+              {
+                name: 'Week 2',  cases: 1398, 
+              },
+              {
+                name: 'Week 3',  cases: 9800, 
+              },
+         ]
      }
-     
-     handleClick=(val)=>{
-        this.setState((prevState) => ({ cooties: prevState.cooties + val }));
+     //contrived fcn to convert cooties in the wild to cases. 
+     convertCootiesToCases=(val)=>{
+        return val < 100 ? 1 : val/100;
      }
+     updateCootieData =()=>{
+         this.convertCootiesToCases(this.cooties)
+     }
+     handleClick=(val, eff)=>{
+        if(eff==='bad'){
+            this.setState((prevState) => ({ 
+            cooties: prevState.cooties * val 
+            }));
+        }
+        if(eff==='good'){
+            //shouldn't happen if using div of pos #
+            if(this.state.cooties <=0){
+                return;
+            }
+            this.setState((prevState) => ({ 
+                    cooties: Math.ceil(prevState.cooties / val) 
+                }));
+        }
+     }
+
     render() {
-        const data = [
-            {
-              name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
-            },
-            {
-              name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
-            },
-            {
-              name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
-            },
-            {
-              name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
-            },
-            {
-              name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-            },
-            {
-              name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-            },
-            {
-              name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
-            },
-          ];
+        
         return (
             <div style={{background: '#999'}}>
                <h2>I am the game div</h2>
                <Score cooties={this.state.cooties}/>
-                <Button habit={'bad'} clicked={this.handleClick.bind(this)}>bad thing</Button>
-                <Button habit={'good'} clicked={this.handleClick.bind(this)}>good thing</Button>
-                <LineChartComp data={data}/>
+                <Button cootieVal={2} effect={'bad'} clicked={this.handleClick.bind(this)}>meeting friends in person</Button>
+                <Button cootieVal={3} effect={'bad'} clicked={this.handleClick.bind(this)}>coughing into your hands</Button>
+                <Button cootieVal={4} effect={'bad'} clicked={this.handleClick.bind(this)}>touching all the things</Button>
+                <Button cootieVal={4} effect={'good'} clicked={this.handleClick.bind(this)}>staying at home</Button>
+                <Button cootieVal={3} effect={'good'} clicked={this.handleClick.bind(this)}>washing hands > 20sec</Button>
+                <Button cootieVal={2} effect={'good'} clicked={this.handleClick.bind(this)}>keeping 6ft/2m away</Button>
+                <LineChartComp data={this.state.cootieData}/>
             </div>
         )
     }

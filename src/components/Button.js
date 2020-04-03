@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Button=(props)=> {
-    console.log(props);
+   
     return (
         <button onClick={()=>{
-            props.habit==='good' ? props.clicked(1) : props.clicked(-1)
+             props.clicked(props.cootieVal, props.effect)
         }}>
          {props.children}   
         </button>
