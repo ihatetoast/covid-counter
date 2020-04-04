@@ -9,4 +9,5 @@ Click on the Good Things to lower the Coronavirus load. Click on the Bad Things 
 notes: 
 * create 3-5 good and bad habits that vary in value. 
 * svg of coronavirus 
-* maybe do these: graph, viral count (state) leads to mini coronas loaded in bg. (recharts?)
+* b.s. a formula for inc viral load for bad things and reduce by good things. 
+* UI fun for when cootie count stages
