@@ -6,8 +6,8 @@ import Score from './Score'
  class Game extends Component {
      state={
          cooties: 1,
-    
      }
+
      //contrived fcn to convert cooties in the wild to cases. 
      convertCootiesToCases=(val)=>{
         return val < 100 ? 1 : val/100;
@@ -32,13 +32,45 @@ import Score from './Score'
             }));
         }
      }
-     componentDidUpdate(prevState) {
-        if (this.state.cooties !== prevState.cooties) {
-            console.log('cootiesssss');
-        }
-      }
+   
     render() {
-        
+        const cootieData=[
+            {
+                behaviour: 'meeting friends in person',
+                cootieVal:2,
+                effect: 'bad'
+            },
+            {
+                behaviour: 'coughing into your hands',
+                cootieVal:3,
+                effect: 'bad'
+            },
+            {
+                behaviour: 'meeting friends in person',
+                cootieVal:2,
+                effect: 'bad'
+            },
+            {
+                behaviour: 'touching all the things',
+                cootieVal:4,
+                effect: 'bad'
+            },
+            {
+                behaviour: 'staying at home',
+                cootieVal:2,
+                effect: 'good'
+            },
+            {
+                behaviour: 'washing hands > 20sec',
+                cootieVal:3,
+                effect: 'good'
+            },
+            {
+                behaviour: 'skeeping 6ft/2m away from others',
+                cootieVal:4,
+                effect: 'good'
+            },
+        ]
         return (
             <div style={{background: '#999'}}>
                <h2>I am the game div</h2>
