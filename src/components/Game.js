@@ -46,8 +46,8 @@ import Score from './Score'
                 effect: 'bad'
             },
             {
-                behaviour: 'meeting friends in person',
-                cootieVal:2,
+                behaviour: 'going maskless in public',
+                cootieVal:5,
                 effect: 'bad'
             },
             {
@@ -57,7 +57,7 @@ import Score from './Score'
             },
             {
                 behaviour: 'staying at home',
-                cootieVal:2,
+                cootieVal:6,
                 effect: 'good'
             },
             {
@@ -66,10 +66,25 @@ import Score from './Score'
                 effect: 'good'
             },
             {
-                behaviour: 'skeeping 6ft/2m away from others',
+                behaviour: 'keeping 6ft/2m away from others',
                 cootieVal:4,
                 effect: 'good'
+            },       
+            {
+                behaviour: 'ignoring epidemiologists and infectious disease experts',
+                cootieVal:5,
+                effect: 'bad'
             },
+            {
+                behaviour: 'getting advice from cousin Dave\'s YouTube channel',
+                cootieVal:3,
+                effect: 'bad'
+            },
+            {
+                behaviour: 'choosing to-go or food delivery services instead of dining out',
+                cootieVal:2,
+                effect: 'good'
+            }
         ]
         return (
             <div style={{background: '#999'}}>
@@ -79,7 +94,7 @@ import Score from './Score'
                 <Button cootieVal={3} effect={'bad'} clicked={this.handleClick.bind(this)}>coughing into your hands</Button>
                 <Button cootieVal={4} effect={'bad'} clicked={this.handleClick.bind(this)}>touching all the things</Button>
                 <Button cootieVal={4} effect={'good'} clicked={this.handleClick.bind(this)}>staying at home</Button>
-                <Button cootieVal={3} effect={'good'} clicked={this.handleClick.bind(this)}>washing hands > 20sec</Button>
+                <Button cootieVal={3} effect={'good'} clicked={this.handleClick.bind(this)}>washing hands &gt; 20sec</Button>
                 <Button cootieVal={2} effect={'good'} clicked={this.handleClick.bind(this)}>keeping 6ft/2m away</Button>
                 
             </div>
