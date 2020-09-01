@@ -1,19 +1,22 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
+/* HEADER */
+.header{
+  background-color: chartreuse;
+}
+.rona-logo {
   height: 10vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .rona-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.rona-header {
   background-color: #282c34;
   min-height: 10vh;
   display: flex;
@@ -24,10 +27,20 @@
   color: white;
 }
 
-.App-link {
+.rona-link {
   color: #61dafb;
 }
-
+ul li div{
+  height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    display: flex;
+    background: #33C3CD;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

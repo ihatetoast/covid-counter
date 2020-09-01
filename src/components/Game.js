@@ -107,12 +107,7 @@ import ButtonList from './ButtonList'
                 <p>On {thisDate.getDate()} {monthName} {thisDate.getFullYear()} at {thisDate.toLocaleTimeString()}, you've woken up from a coma into the middle of a global pandemic. Your room is sterile, but outside is a bloody mess with a new set of rules to keep you safe. Your behaviour affects the viral load around you.</p>
                <Score cooties={this.state.cooties} />
                <ButtonList cooties={cootieData} handleClick={this.handleClick.bind(this)}/>
-                {/* <Button cootieVal={2} effect={'bad'} clicked={this.handleClick.bind(this)}>meeting friends in person</Button>
-                <Button cootieVal={3} effect={'bad'} clicked={this.handleClick.bind(this)}>coughing into your hands</Button>
-                <Button cootieVal={4} effect={'bad'} clicked={this.handleClick.bind(this)}>touching all the things</Button>
-                <Button cootieVal={4} effect={'good'} clicked={this.handleClick.bind(this)}>staying at home</Button>
-                <Button cootieVal={3} effect={'good'} clicked={this.handleClick.bind(this)}>washing hands &gt; 20sec</Button>
-                <Button cootieVal={2} effect={'good'} clicked={this.handleClick.bind(this)}>keeping 6ft/2m away</Button> */}
+                
                 
             </div>
         )
