@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Button from './ButtonItem'
 import Score from './Score'
 import ButtonList from './ButtonList'
 //cootie count never below 1 because there's never a time when there are no cooties.
@@ -15,7 +14,9 @@ import ButtonList from './ButtonList'
      updateCootieData =()=>{
         this.convertCootiesToCases(this.cooties)
      }
+
      handleClick=(val, eff)=>{
+        console.log(val)
         if(eff==='bad'){
             this.setState((prevState) => ({ 
                 cooties: prevState.cooties * val 
@@ -104,9 +105,9 @@ import ButtonList from './ButtonList'
         const monthName = this.getMonthName(thisDate.getMonth())
         return (
             <div style={{background: '#999'}}>
-                <p>On {thisDate.getDate()} {monthName} {thisDate.getFullYear()} at {thisDate.toLocaleTimeString()}, you've woken up from a coma into the middle of a global pandemic. Your room is sterile, but outside is a bloody mess with a new set of rules to keep you safe. Your behaviour affects the viral load around you.</p>
+                <p>On {thisDate.getDate()} {monthName} {thisDate.getFullYear()} at {thisDate.toLocaleTimeString()}, you've woken from a coma into the middle of a global pandemic. Your room is sterile, but outside is a bloody mess with a new set of rules to keep you safe. Your behaviour affects the viral load around you.</p>
                <Score cooties={this.state.cooties} />
-               <ButtonList cooties={cootieData} handleClick={this.handleClick.bind(this)}/>
+               <ButtonList cooties={cootieData} handleClick={this.handleClick}/>
                 
                 
             </div>

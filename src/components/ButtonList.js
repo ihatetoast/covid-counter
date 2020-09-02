@@ -4,14 +4,17 @@ import styles from '../styles/ButtonList.module.css';
 const ButtonList =(props)=> {
     return (
         <ul className={styles.list}>
-           {props.cooties.map((cootie, id)=>(
-               <ButtonItem key={cootie.id} id={cootie.id} >
+           {props.cooties.map((cootie, id)=>{
+
+               return(
+               
+               <ButtonItem key={cootie.id}  >
                     <div>
                         <span>{cootie.behaviour}</span>
-                        <button val={cootie.cootieVal} effect ={cootie.effect} onClick={()=>alert(cootie.cootieVal)} type="button">X</button>
+                        <button type="button" onClick={()=>props.handleClick(cootie.cootieVal, cootie.effect)}>X</button>
                     </div>
                </ButtonItem>
-           ))}
+           )})}
         </ul>
     )
 }
