@@ -5,6 +5,7 @@ import ButtonList from './ButtonList'
  class Game extends Component {
      state={
          cooties: 1,
+         cases: 0
      }
      
      //contrived fcn to convert cooties in the wild to cases. 
@@ -12,7 +13,11 @@ import ButtonList from './ButtonList'
         return val < 100 ? 1 : val/100;
      }
      updateCootieData =()=>{
-        this.convertCootiesToCases(this.cooties)
+        const caseNumber = this.convertCootiesToCases(this.state.cooties)
+        console.log(caseNumber)
+        this.setState((prevState) => ({ 
+            cases: prevState.cases + caseNumber 
+        }));
      }
 
      handleClick=(val, eff)=>{
@@ -32,6 +37,7 @@ import ButtonList from './ButtonList'
                 cooties: Math.ceil(prevState.cooties / val) 
             }));
         }
+        this.updateCootieData()
      }
       getMonthName=(num)=>{
         const months =["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octber", "November", "December"];
@@ -90,13 +96,13 @@ import ButtonList from './ButtonList'
             },
             {
                 id:198,
-                behaviour: 'getting advice from cousin Dave\'s YouTube channel',
+                behaviour: 'doing "research" from a YouTube',
                 cootieVal:3,
                 effect: 'bad'
             },
             {
                 id:199,
-                behaviour: 'choosing to-go or food delivery services instead of dining out',
+                behaviour: 'choosing curb-side or delivery instead of dining out',
                 cootieVal:2,
                 effect: 'good'
             }
@@ -104,9 +110,9 @@ import ButtonList from './ButtonList'
         const thisDate = new Date();
         const monthName = this.getMonthName(thisDate.getMonth())
         return (
-            <div style={{background: '#999'}}>
-                <p>On {thisDate.getDate()} {monthName} {thisDate.getFullYear()} at {thisDate.toLocaleTimeString()}, you've woken from a coma into the middle of a global pandemic. Your room is sterile, but outside is a bloody mess with a new set of rules to keep you safe. Your behaviour affects the viral load around you.</p>
-               <Score cooties={this.state.cooties} />
+            <div className="game_wrapper">
+                <p className="intro">On {thisDate.getDate()} {monthName} {thisDate.getFullYear()} at {thisDate.toLocaleTimeString()}, you've woken from a coma into the middle of a global pandemic. Your room is sterile, but outside is a bloody mess with a new set of rules to keep you safe. Your behaviour affects the viral load around you.</p>
+               <Score cooties={this.state.cooties} cases={this.state.cases}/>
                <ButtonList cooties={cootieData} handleClick={this.handleClick}/>
                 
                 

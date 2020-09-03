@@ -3,8 +3,11 @@
 }
 .list button{
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    background:#cd337b;
+    color: #7bcd33;
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
     border: none;
     margin:5px;
 }
