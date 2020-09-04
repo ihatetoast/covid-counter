@@ -90,21 +90,33 @@ import ButtonList from './ButtonList'
             },       
             {
                 id:197,
-                behaviour: 'ignoring epidemiologists and infectious disease experts',
+                behaviour: 'ignoring epidemiologists',
                 cootieVal:5,
                 effect: 'bad'
             },
             {
                 id:198,
-                behaviour: 'doing "research" from a YouTube',
+                behaviour: 'doing "research" on YouTube',
                 cootieVal:3,
                 effect: 'bad'
             },
             {
                 id:199,
-                behaviour: 'choosing curb-side or delivery instead of dining out',
+                behaviour: 'doing curb-side or delivery',
                 cootieVal:2,
                 effect: 'good'
+            },
+            {
+                id:200,
+                behaviour: 'going to parties',
+                cootieVal:4,
+                effect: 'bad'
+            },
+            {
+                id:201,
+                behaviour: 'raging at fellow shoppers at Costco',
+                cootieVal:2,
+                effect: 'bad'
             }
         ]
         const thisDate = new Date();

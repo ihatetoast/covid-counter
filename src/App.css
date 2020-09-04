@@ -4,8 +4,10 @@
 /* HEADER */
 .header{
   background-color: #7bcd33;
+  padding: 1em;
 }
 .header h1{
+  margin-top: 0.3em;
   margin-bottom: 0;
 }
 .rona-logo {
@@ -45,25 +47,37 @@
 .game_wrapper{
   padding: 1.5em 1em;
 }
+p.intro{
+  width: 90%;
+  margin:0 auto;
+}
 ul{
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
 }
 ul li{
   margin-bottom: 1em;
 }
 ul li div{
   height: 10em;
-    width: 10em;
-    border-radius: 50%;
-    display: flex;
-    background: #33C3CD;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
+  width: 10em;
+  border-radius: 50%;
+  display: flex;
+  background: #33C3CD;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin:1em;
 }
 .intro{
   margin:0;
+}
+@media screen and (min-width: 1230px){
+  ul, p.intro{
+    width:75%;
+  }
 }
