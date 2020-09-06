@@ -1,15 +1,14 @@
 # Covid Counter
 
-This is a basic React clicker app I created as an excuse to practice styling with CSS modules (vs my fav Styled Components), getting familiar with SVGs and Sketch, and not getting too down as I attempt to get through March and April 2020 with my fellow Earthlings.
+## What?
+* This is a basic React clicker app.
+* Click on the Good Things to lower the Coronavirus load. Click on the Bad Things to send us all to the hospital.
 
-Edit on 11 August. Seriously? Are we still here?
+## Why? 
+* I love React. I do. Fangirl here. Current job does not have React, and I do not want to lose it. Little apps after work keep me on the React tract, and dat's a fact, Jack.
+* This is Hook-less so that I wouldn't forget how to use Class.
+* It is something to get me through Rona 2020
 
-Click on the Good Things to lower the Coronavirus load. Click on the Bad Things to send us all to the hospital.
-
-
-~~~
-notes: 
-* create 3-5 good and bad habits that vary in value. (get snarky since it's bloody still going on)
-* svg of coronavirus 
-* b.s. a formula for inc viral load for bad things and reduce by good things. 
-* UI fun for when cootie count stages
+## How
+* Create React App (or CRApp)
+* Sketch App (virus and mask)

@@ -1,6 +1,7 @@
 import React from 'react'
 import ButtonItem from './ButtonItem'
 import styles from '../styles/ButtonList.module.css';
+import {ReactComponent as Mask} from './../images/mask.svg';
 const ButtonList =(props)=> {
     return (
         <ul className={styles.list}>
@@ -9,9 +10,13 @@ const ButtonList =(props)=> {
                return(
                
                <ButtonItem key={cootie.id}  >
-                    <div>
+                    <div className="button-content">
                         <span>{cootie.behaviour}</span>
-                        <button type="button" onClick={()=>props.handleClick(cootie.cootieVal, cootie.effect)}>X</button>
+                        <div className="mask-wrapper">
+                            <span className="mask-ties" id="tie-1"></span>
+                            <button type="button" onClick={()=>props.handleClick(cootie.cootieVal, cootie.effect)}><Mask /></button>
+                            <span className="mask-ties" id="tie-2"></span>
+                        </div>
                     </div>
                </ButtonItem>
            )})}
