@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.4328d12c.chunk.css",
-    "main.js": "/static/js/main.d9ebfae4.chunk.js",
-    "main.js.map": "/static/js/main.d9ebfae4.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ff876562.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ff876562.js.map",
-    "static/js/2.3fea8fa7.chunk.js": "/static/js/2.3fea8fa7.chunk.js",
-    "static/js/2.3fea8fa7.chunk.js.map": "/static/js/2.3fea8fa7.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ac2caa1e68e4ce14b4298bc6f683a15a.js": "/precache-manifest.ac2caa1e68e4ce14b4298bc6f683a15a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.4328d12c.chunk.css.map": "/static/css/main.4328d12c.chunk.css.map",
-    "static/js/2.3fea8fa7.chunk.js.LICENSE.txt": "/static/js/2.3fea8fa7.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/static/media/logo.1b0618a5.svg",
-    "static/media/mask.c897675e.svg": "/static/media/mask.c897675e.svg"
+    "main.css": "/covid-counter/static/css/main.4328d12c.chunk.css",
+    "main.js": "/covid-counter/static/js/main.b03ff30d.chunk.js",
+    "main.js.map": "/covid-counter/static/js/main.b03ff30d.chunk.js.map",
+    "runtime-main.js": "/covid-counter/static/js/runtime-main.f88703e6.js",
+    "runtime-main.js.map": "/covid-counter/static/js/runtime-main.f88703e6.js.map",
+    "static/js/2.3fea8fa7.chunk.js": "/covid-counter/static/js/2.3fea8fa7.chunk.js",
+    "static/js/2.3fea8fa7.chunk.js.map": "/covid-counter/static/js/2.3fea8fa7.chunk.js.map",
+    "index.html": "/covid-counter/index.html",
+    "precache-manifest.45284757f46e4cba01d5b7f4956f5d29.js": "/covid-counter/precache-manifest.45284757f46e4cba01d5b7f4956f5d29.js",
+    "service-worker.js": "/covid-counter/service-worker.js",
+    "static/css/main.4328d12c.chunk.css.map": "/covid-counter/static/css/main.4328d12c.chunk.css.map",
+    "static/js/2.3fea8fa7.chunk.js.LICENSE.txt": "/covid-counter/static/js/2.3fea8fa7.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/covid-counter/static/media/logo.1b0618a5.svg",
+    "static/media/mask.c897675e.svg": "/covid-counter/static/media/mask.c897675e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ff876562.js",
+    "static/js/runtime-main.f88703e6.js",
     "static/js/2.3fea8fa7.chunk.js",
     "static/css/main.4328d12c.chunk.css",
-    "static/js/main.d9ebfae4.chunk.js"
+    "static/js/main.b03ff30d.chunk.js"
   ]
 }
