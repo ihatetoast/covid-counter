@@ -12,3 +12,5 @@
 ## How
 * Create React App (or CRApp)
 * Sketch App (virus and mask)
+
+![Covid Counter](covid-counter.png)
